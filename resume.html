@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Nithis Soosai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 p-4 sm:p-8">
+
+  <!-- Print bar -->
+  <div class="max-w-4xl mx-auto mb-6 flex items-center justify-between no-print">
+    <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 bg-white px-4 py-2 rounded-xl shadow-sm border border-slate-200">
+      ← Back to Portfolio
+    </a>
+    <button onclick="window.print()" class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl shadow-sm transition">
+      🖨️ Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg border border-slate-200 page-container space-y-6">
+    
+    <!-- Header -->
+    <div class="text-center border-b border-slate-200 pb-6">
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 uppercase">NITHIS SOOSAI</h1>
+      <p class="text-sm font-medium text-slate-600 mt-1">
+        Dindigul, Tamil Nadu, India &nbsp;|&nbsp; +91 84895 78254 &nbsp;|&nbsp; 
+        <a href="mailto:nithissoosai20@gmail.com" class="text-blue-600 underline">nithissoosai20@gmail.com</a>
+      </p>
+      <p class="text-xs text-slate-500 mt-1 font-mono">
+        <a href="https://linkedin.com/in/m-nithis-soosai-67340b318" target="_blank" class="text-blue-600 hover:underline">linkedin.com/in/m-nithis-soosai-67340b318</a> &nbsp;|&nbsp;
+        <a href="https://github.com/nithissoosai20-spec" target="_blank" class="text-blue-600 hover:underline">github.com/nithissoosai20-spec</a>
+      </p>
+    </div>
+
+    <!-- Career Objective -->
+    <div>
+      <h2 class="text-xs font-bold font-mono tracking-widest text-slate-500 uppercase border-b border-slate-300 pb-1 mb-2">CAREER OBJECTIVE</h2>
+      <p class="text-xs text-slate-700 leading-relaxed text-justify">
+        Motivated Computer Applications postgraduate (MCA) with hands-on experience in web application development using Python, Flask, and MongoDB. Strong problem-solving skills, a collaborative approach, and a keen interest in learning new technologies. Seeking an entry-level role in a dynamic organization where I can apply my technical skills, grow professionally, and contribute to team success.
+      </p>
+    </div>
+
+    <!-- Technical Skills -->
+    <div>
+      <h2 class="text-xs font-bold font-mono tracking-widest text-slate-500 uppercase border-b border-slate-300 pb-1 mb-2">TECHNICAL SKILLS</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1.5 gap-x-4 text-xs text-slate-800">
+        <div><span class="font-semibold text-slate-700">• Programming:</span> Python</div>
+        <div><span class="font-semibold text-slate-700">• Web Technologies:</span> HTML, CSS, Flask</div>
+        <div><span class="font-semibold text-slate-700">• ERP / Frameworks:</span> Odoo 19 (custom module development), XML views</div>
+        <div><span class="font-semibold text-slate-700">• Database:</span> MongoDB Atlas, PostgreSQL</div>
+        <div><span class="font-semibold text-slate-700">• Security Concepts:</span> SIEM, Log Analysis, Threat Detection, Incident Response, RBAC, 2FA</div>
+        <div><span class="font-semibold text-slate-700">• Tools and Integrations:</span> Git, GitHub, AbuseIPDB, Brevo, Twilio</div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div>
+      <h2 class="text-xs font-bold font-mono tracking-widest text-slate-500 uppercase border-b border-slate-300 pb-1 mb-3">PROJECTS</h2>
+      
+      <!-- Project 1 -->
+      <div class="mb-4">
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-sm font-bold text-slate-900">Hospital Management System (Odoo 19)</h3>
+          <span class="text-xs text-slate-500 italic">In development (~80% complete)</span>
+        </div>
+        <p class="text-xs font-mono text-slate-600 mb-1">Python, Odoo 19, XML | Modules: <em>hospital_management</em>, <em>hospital_hr_asset</em></p>
+        <ul class="list-disc list-outside ml-4 space-y-1 text-xs text-slate-700">
+          <li>Developing custom Odoo 19 modules for hospital operations, including a separate HR and asset management module.</li>
+          <li>Built role-based dashboards and menu structures so each user role sees only the relevant workflows.</li>
+          <li>Defined models, views, actions, and menus, and resolved module-loading issues such as XML external ID mismatches.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="mb-4">
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-sm font-bold text-slate-900">Automated Incident Command System (SOC Dashboard)</h3>
+          <span class="text-xs text-slate-500 italic">Completed</span>
+        </div>
+        <p class="text-xs font-mono text-slate-600 mb-1">Python, Flask, MongoDB Atlas</p>
+        <ul class="list-disc list-outside ml-4 space-y-1 text-xs text-slate-700">
+          <li>Developed a web-based SOC dashboard for real-time security log monitoring and threat detection.</li>
+          <li>Integrated the AbuseIPDB API for IP reputation analysis and implemented 2FA, reCAPTCHA, and account lockout.</li>
+          <li>Built an automated alerting pipeline using Brevo (email) and Twilio (voice calls) for rapid incident notification.</li>
+          <li>Designed role-based access control to enforce least-privilege user management.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div>
+        <div class="flex justify-between items-baseline">
+          <h3 class="text-sm font-bold text-slate-900">Vehicle Showroom Management System</h3>
+        </div>
+        <p class="text-xs font-mono text-slate-600 mb-1">Full-Stack Web Application</p>
+        <ul class="list-disc list-outside ml-4 space-y-1 text-xs text-slate-700">
+          <li>Designed and developed a full-stack web application for managing vehicle inventory and sales.</li>
+          <li>Streamlined user workflows to improve usability and operational efficiency.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Internship -->
+    <div>
+      <h2 class="text-xs font-bold font-mono tracking-widest text-slate-500 uppercase border-b border-slate-300 pb-1 mb-2">INTERNSHIP</h2>
+      <div class="flex justify-between items-baseline mb-1">
+        <h3 class="text-xs font-bold text-slate-900">Web Development Intern, ThinkCove Technologies Pvt. Ltd.</h3>
+        <span class="text-xs text-slate-500">December 2025 - March 2026</span>
+      </div>
+      <ul class="list-disc list-outside ml-4 space-y-1 text-xs text-slate-700">
+        <li>Developed responsive web applications using HTML and CSS.</li>
+        <li>Collaborated with developers to understand real-world workflows and delivery practices.</li>
+        <li>Gained hands-on experience in deployment and testing of web applications.</li>
+      </ul>
+    </div>
+
+    <!-- Education -->
+    <div>
+      <h2 class="text-xs font-bold font-mono tracking-widest text-slate-500 uppercase border-b border-slate-300 pb-1 mb-2">EDUCATION</h2>
+      <div class="space-y-1.5 text-xs text-slate-800">
+        <div class="flex justify-between">
+          <span><strong>Master of Computer Applications (MCA)</strong>, St. Joseph's College (Autonomous), Tiruchirappalli</span>
+          <span class="font-mono text-slate-600">2026 | 74.49%</span>
+        </div>
+        <div class="flex justify-between">
+          <span><strong>Bachelor of Computer Science</strong>, G.T.N Arts College, Dindigul</span>
+          <span class="font-mono text-slate-600">2023 | 75.6%</span>
+        </div>
+        <div class="flex justify-between">
+          <span><strong>Higher Secondary</strong>, John Paul Higher Secondary School</span>
+          <span class="font-mono text-slate-600">2020 | 88.9%</span>
+        </div>
+        <div class="flex justify-between">
+          <span><strong>SSLC</strong>, Holy Cross Matric Hr. Sec. School</span>
+          <span class="font-mono text-slate-600">2018 | 80%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div>
+      <h2 class="text-xs font-bold font-mono tracking-widest text-slate-500 uppercase border-b border-slate-300 pb-1 mb-2">ADDITIONAL INFORMATION</h2>
+      <div class="space-y-1 text-xs text-slate-800">
+        <div><span class="font-semibold text-slate-700">• Certification:</span> Senior Grade Typewriting (English and Tamil)</div>
+        <div><span class="font-semibold text-slate-700">• Languages:</span> Tamil, English</div>
+        <div><span class="font-semibold text-slate-700">• Interests:</span> Reading, Travelling, Music, Cricket</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

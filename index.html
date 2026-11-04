@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nithis Soosai | Full-Stack Developer & SOC Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Nithis Soosai - MCA Postgraduate, Web Developer (Python, Flask, Odoo 19), and Cybersecurity / SOC Enthusiast.">
+  <meta name="keywords" content="Nithis Soosai, Python Developer, Odoo 19 ERP, SOC Dashboard, Cybersecurity, Flask, Web Developer, Portfolio">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            cyber: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+            },
+            accent: {
+              blue: '#3b82f6',
+              purple: '#8b5cf6',
+              cyan: '#06b6d4',
+              emerald: '#10b981',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(6, 182, 212, 0.2)' },
+              '100%': { boxShadow: '0 0 35px rgba(99, 102, 241, 0.4)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0ea5e9;
+    }
+
+    .glass-card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.15);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-border {
+      position: relative;
+    }
+    .gradient-border::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.5), rgba(129, 140, 248, 0.2), rgba(192, 132, 252, 0));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#070b13] text-slate-200 font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen relative overflow-x-hidden">
+
+  <!-- Ambient Background Glows -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-[128px]"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-[140px]"></div>
+    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-emerald-500/10 rounded-full blur-[128px]"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-60"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#070b13]/80 border-b border-white/5 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Name Badge -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300">
+          NS
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors">Nithis Soosai</span>
+          <span class="text-xs font-mono text-cyan-400/80">Full-Stack & SOC</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-white/5">
+        <a href="#about" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full hover:bg-white/5 transition-all">About</a>
+        <a href="#skills" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full hover:bg-white/5 transition-all">Skills</a>
+        <a href="#projects" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full hover:bg-white/5 transition-all">Projects</a>
+        <a href="#experience" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full hover:bg-white/5 transition-all">Experience</a>
+        <a href="#education" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full hover:bg-white/5 transition-all">Education</a>
+        <a href="#contact" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://github.com/nithissoosai20-spec" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 hover:text-white border border-white/10 transition-colors" title="GitHub Profile">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://linkedin.com/in/m-nithis-soosai-67340b318" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 hover:text-white border border-white/10 transition-colors" title="LinkedIn Profile">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="#contact" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all flex items-center gap-2">
+          <span>Hire Me</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-white/5 bg-[#070b13]/95 backdrop-blur-2xl px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-3">
+        <a href="#about" class="mobile-nav-link text-slate-300 hover:text-cyan-400 text-base font-medium py-2">About</a>
+        <a href="#skills" class="mobile-nav-link text-slate-300 hover:text-cyan-400 text-base font-medium py-2">Skills</a>
+        <a href="#projects" class="mobile-nav-link text-slate-300 hover:text-cyan-400 text-base font-medium py-2">Projects</a>
+        <a href="#experience" class="mobile-nav-link text-slate-300 hover:text-cyan-400 text-base font-medium py-2">Experience</a>
+        <a href="#education" class="mobile-nav-link text-slate-300 hover:text-cyan-400 text-base font-medium py-2">Education</a>
+        <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-cyan-400 text-base font-medium py-2">Contact</a>
+        <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <a href="https://github.com/nithissoosai20-spec" target="_blank" class="p-2.5 rounded-xl bg-slate-800 text-slate-300"><i data-lucide="github" class="w-5 h-5"></i></a>
+            <a href="https://linkedin.com/in/m-nithis-soosai-67340b318" target="_blank" class="p-2.5 rounded-xl bg-slate-800 text-slate-300"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          </div>
+          <a href="#contact" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative z-10 pt-28 sm:pt-36">
+    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 flex flex-col gap-6 text-left">
+          
+          <!-- Availability Pill -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium w-fit">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-4"></span>
+            <span>Available for Full-time Roles & Immediate Joining</span>
+          </div>
+
+          <!-- Main Headline -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Hi, I'm <span class="gradient-text">Nithis Soosai</span>
+            </h1>
+            <div class="text-xl sm:text-2xl font-mono text-cyan-300 flex items-center gap-2 min-h-[38px]">
+              <span class="text-slate-500">&gt;</span>
+              <span id="typewriter" class="font-semibold"></span>
+              <span class="w-2 h-6 bg-cyan-400 animate-pulse inline-block"></span>
+            </div>
+          </div>
+
+          <!-- Bio Pitch -->
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Passionate <strong>MCA Postgraduate</strong> specializing in full-stack Python web development, 
+            <strong>Odoo 19 ERP</strong> custom module engineering, and <strong>SOC Cybersecurity Dashboards</strong>. 
+            Proven experience integrating real-time threat intelligence (<span class="text-cyan-300">AbuseIPDB</span>), 
+            multi-factor authentication (<span class="text-cyan-300">PyOTP 2FA</span>), and automated alert pipelines.
+          </p>
+
+          <!-- Key Metrics / Highlights Quick Row -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-2">
+            <div class="p-3.5 rounded-2xl bg-slate-900/40 border border-white/5">
+              <div class="text-2xl font-bold text-white flex items-center gap-1 font-mono">
+                <span class="text-cyan-400">SOC</span> Security
+              </div>
+              <div class="text-xs text-slate-400">SIEM & Threat Intel</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-900/40 border border-white/5">
+              <div class="text-2xl font-bold text-white flex items-center gap-1 font-mono">
+                <span class="text-indigo-400">Odoo 19</span> ERP
+              </div>
+              <div class="text-xs text-slate-400">Custom Modules & XML</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-900/40 border border-white/5 col-span-2 sm:col-span-1">
+              <div class="text-2xl font-bold text-white flex items-center gap-1 font-mono">
+                <span class="text-emerald-400">Python</span> / Flask
+              </div>
+              <div class="text-xs text-slate-400">MongoDB Atlas Stack</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 transition-all flex items-center gap-2 group">
+              <i data-lucide="code-2" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+              <span>Explore My Projects</span>
+            </a>
+            <button onclick="openResumeModal()" class="px-6 py-3.5 rounded-xl font-semibold text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-white/10 hover:border-cyan-500/40 transition-all flex items-center gap-2">
+              <i data-lucide="file-text" class="w-5 h-5 text-cyan-400"></i>
+              <span>View Resume</span>
+            </button>
+            <a href="#contact" class="px-5 py-3.5 rounded-xl font-medium text-slate-400 hover:text-white transition-colors flex items-center gap-1.5">
+              <span>Contact Me</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Direct Contact Quick Badges -->
+          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400 pt-2 font-mono">
+            <span class="flex items-center gap-1.5 text-slate-300">
+              <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i> Dindigul, Tamil Nadu, India
+            </span>
+            <span class="text-slate-600">•</span>
+            <a href="mailto:nithissoosai20@gmail.com" class="flex items-center gap-1.5 text-slate-300 hover:text-cyan-400 transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-indigo-400"></i> nithissoosai20@gmail.com
+            </a>
+            <span class="text-slate-600">•</span>
+            <a href="tel:+918489578254" class="flex items-center gap-1.5 text-slate-300 hover:text-cyan-400 transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i> +91 84895 78254
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Profile Showcase Card -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Glow background decoration -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-1000 animate-pulse-slow"></div>
+            
+            <!-- Glass Card Frame -->
+            <div class="relative glass-card rounded-3xl p-6 sm:p-8 flex flex-col items-center border border-white/10 shadow-2xl">
+              
+              <!-- Profile Image Wrapper with Glowing Ring -->
+              <div class="relative mb-6">
+                <div class="w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden p-1.5 bg-gradient-to-tr from-cyan-400 via-indigo-500 to-purple-500 shadow-xl">
+                  <img src="assets/profile.jpg" alt="Nithis Soosai" class="w-full h-full object-cover rounded-xl object-top filter contrast-105" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'">
+                </div>
+
+                <!-- Floating mini-badge 1: Security -->
+                <div class="absolute -bottom-3 -left-4 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-cyan-500/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                  <span class="text-xs font-mono text-cyan-300 font-semibold">SOC / SIEM</span>
+                </div>
+
+                <!-- Floating mini-badge 2: Odoo -->
+                <div class="absolute -top-3 -right-3 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-indigo-500/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-400"></i>
+                  <span class="text-xs font-mono text-indigo-300 font-semibold">Odoo 19</span>
+                </div>
+              </div>
+
+              <!-- Name & Title -->
+              <h2 class="text-2xl font-bold text-white text-center">Nithis Soosai</h2>
+              <p class="text-sm text-cyan-400 font-mono mt-0.5">MCA Postgraduate (2026)</p>
+              <p class="text-xs text-slate-400 mt-2 text-center max-w-xs">
+                St. Joseph's College (Autonomous), Tiruchirappalli
+              </p>
+
+              <!-- Social Links Row -->
+              <div class="flex items-center gap-3 mt-6 w-full justify-center">
+                <a href="https://github.com/nithissoosai20-spec" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-800/80 hover:bg-cyan-500/20 border border-white/5 hover:border-cyan-500/40 text-slate-300 hover:text-cyan-300 text-xs font-mono font-medium flex items-center justify-center gap-2 transition-all">
+                  <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/m-nithis-soosai-67340b318" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-800/80 hover:bg-indigo-500/20 border border-white/5 hover:border-indigo-500/40 text-slate-300 hover:text-indigo-300 text-xs font-mono font-medium flex items-center justify-center gap-2 transition-all">
+                  <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                </a>
+                <a href="mailto:nithissoosai20@gmail.com" class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-emerald-500/20 border border-white/5 hover:border-emerald-500/40 text-slate-300 hover:text-emerald-300 transition-all" title="Email Nithis">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </a>
+              </div>
+
+              <!-- Verified Status Pill -->
+              <div class="mt-4 pt-4 border-t border-white/5 w-full flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span class="flex items-center gap-1.5 text-slate-400">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400"></i> Code Verified
+                </span>
+                <span class="text-emerald-400 font-semibold">Ready to Work</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-xs font-mono tracking-widest text-cyan-400 uppercase bg-cyan-500/10 border border-cyan-500/20 px-3.5 py-1.5 rounded-full mb-3">About Me</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Engineering Scalable Web Apps & Security Systems</h2>
+          <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+            Combining rigorous computer science fundamentals with hands-on enterprise application development.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1: Full-Stack Web Dev -->
+          <div class="glass-card rounded-2xl p-7 glass-card-hover border border-white/5">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-5">
+              <i data-lucide="code" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Web Application Development</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              Hands-on building end-to-end web applications with Python, Flask, Jinja2, MongoDB Atlas, and responsive modern frontends using HTML5 and CSS3.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-300 font-mono">
+              <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Modular RESTful architecture</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Dynamic session & cookie management</li>
+              <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Responsive UI & cross-browser support</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: Odoo 19 ERP -->
+          <div class="glass-card rounded-2xl p-7 glass-card-hover border border-white/5">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5">
+              <i data-lucide="layers" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Odoo 19 ERP Customization</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              Developing custom addons for Odoo 19, mastering data models, relational fields, form/tree/kanban views, wizards, and granular role security rules.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-300 font-mono">
+              <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> Custom addon & module architecture</li>
+              <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> XML views, actions, & menu structures</li>
+              <li class="flex items-center gap-2"><span class="text-indigo-400">✓</span> Role-based security (ir.model.access)</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3: SOC & Threat Intel -->
+          <div class="glass-card rounded-2xl p-7 glass-card-hover border border-white/5">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5">
+              <i data-lucide="shield-alert" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Cybersecurity & SOC Operations</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              Building automated incident command dashboards, parsing security logs, querying AbuseIPDB threat intelligence, and deploying automated phone/email alerts.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-300 font-mono">
+              <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> SIEM log parsing & threat detection</li>
+              <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> 2FA TOTP & reCAPTCHA v2 bot protection</li>
+              <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> Automated voice (Twilio) & email alerts</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Personal Summary & Attributes Grid -->
+        <div class="mt-12 glass-card rounded-2xl p-8 border border-white/5">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-white/10">
+            
+            <div class="p-2">
+              <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider">Degree</span>
+              <h4 class="text-lg font-bold text-white mt-1">MCA (2024–2026)</h4>
+              <p class="text-xs text-slate-400 mt-1">St. Joseph's College (Autonomous)</p>
+            </div>
+
+            <div class="p-2 md:pl-6">
+              <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Location</span>
+              <h4 class="text-lg font-bold text-white mt-1">Dindigul, Tamil Nadu</h4>
+              <p class="text-xs text-slate-400 mt-1">Open to relocation & remote</p>
+            </div>
+
+            <div class="p-2 md:pl-6">
+              <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Languages</span>
+              <h4 class="text-lg font-bold text-white mt-1">English, Tamil</h4>
+              <p class="text-xs text-slate-400 mt-1">Fluent communication</p>
+            </div>
+
+            <div class="p-2 md:pl-6">
+              <span class="text-xs font-mono text-purple-400 uppercase tracking-wider">Special Skills</span>
+              <h4 class="text-lg font-bold text-white mt-1">Senior Grade Typewriting</h4>
+              <p class="text-xs text-slate-400 mt-1">Certified in English & Tamil</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-xs font-mono tracking-widest text-indigo-400 uppercase bg-indigo-500/10 border border-indigo-500/20 px-3.5 py-1.5 rounded-full mb-3">Technical Arsenal</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Skills & Technologies</h2>
+          <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+            Core competencies honed through academic curriculum, live module development, and hands-on system building.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Category 1: Programming & Backend -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                <i data-lucide="terminal" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Programming & Backend</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-medium">Python 3</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-medium">Flask Framework</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">RESTful APIs</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Jinja2 Templating</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Scrypt / Werkzeug</span>
+            </div>
+          </div>
+
+          <!-- Category 2: ERP & Frameworks -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                <i data-lucide="box" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">ERP & Frameworks</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-indigo-300 border border-indigo-500/30 text-xs font-mono font-medium">Odoo 19</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-indigo-300 border border-indigo-500/30 text-xs font-mono font-medium">Custom Module Dev</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">XML Architecture</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Views & Actions</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">QWeb Reporting</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Security & SOC Concepts -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Security & SOC</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-purple-300 border border-purple-500/30 text-xs font-mono font-medium">SIEM Concepts</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-purple-300 border border-purple-500/30 text-xs font-mono font-medium">Threat Detection</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Log Analysis</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Incident Response</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">RBAC & 2FA (TOTP)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">AbuseIPDB API</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Databases -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <i data-lucide="database" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Databases</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-medium">MongoDB Atlas</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-medium">PyMongo</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">PostgreSQL (Odoo)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Document Modeling</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Data Sanitization</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Frontend Technologies -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <i data-lucide="layout" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Web Frontend</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-amber-300 border border-amber-500/30 text-xs font-mono font-medium">HTML5 Semantic</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-amber-300 border border-amber-500/30 text-xs font-mono font-medium">CSS3 Styling</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Responsive Layouts</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Tailwind CSS</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">JavaScript (DOM/AJAX)</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Integrations & Tools -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-pink-500/10 text-pink-400 border border-pink-500/20">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white">Integrations & Tools</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-pink-300 border border-pink-500/30 text-xs font-mono font-medium">Git & GitHub</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-pink-300 border border-pink-500/30 text-xs font-mono font-medium">Brevo (Sendinblue API)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Twilio Voice API</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">Google reCAPTCHA v2</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-slate-300 border border-white/10 text-xs font-mono font-medium">ReportLab (PDF)</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-xs font-mono tracking-widest text-cyan-400 uppercase bg-cyan-500/10 border border-cyan-500/20 px-3.5 py-1.5 rounded-full mb-3">Portfolio Work</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Projects</h2>
+          <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+            Real production-grade applications engineered with full code repositories, secure authentication, and robust data models.
+          </p>
+        </div>
+
+        <div class="space-y-12">
+          
+          <!-- PROJECT 1: Royal Challengers SOC Dashboard -->
+          <div class="glass-card rounded-3xl p-6 sm:p-10 border border-white/10 relative overflow-hidden group">
+            <div class="absolute -top-24 -right-24 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-500/20 transition-all duration-700"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <!-- Left: Project Info -->
+              <div class="lg:col-span-7 space-y-5">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold">
+                    Cybersecurity & Incident Response
+                  </span>
+                  <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+                    Completed & Fully Functional
+                  </span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  Automated Incident Command System (Royal Challengers SOC)
+                </h3>
+
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                  A comprehensive, web-based <strong>Security Operations Center (SOC) dashboard</strong> built to monitor real-time threat telemetry, enforce zero-trust access control, and automate high-severity incident responses.
+                </p>
+
+                <!-- Bullet Points -->
+                <div class="space-y-2.5 text-sm text-slate-300">
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+                    <span><strong>AbuseIPDB Threat Intelligence:</strong> Automated real-time IP reputation checks, country lookup, and dynamic IP blocklist enforcement.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+                    <span><strong>Multi-Factor Security:</strong> TOTP QR 2FA with <code>pyotp</code>, Google reCAPTCHA v2 bot protection, account lockouts, and honeytokens.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+                    <span><strong>Automated Alert Escalation:</strong> Brevo HTTP API for email dispatch and Twilio Voice API for automated incident emergency phone calls.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+                    <span><strong>Report Generation & Audit Trails:</strong> Generates instant incident audit reports in <strong>PDF</strong> and <strong>DOCX</strong> with full analyst remarks.</span>
+                  </div>
+                </div>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300 text-xs font-mono">Python Flask</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300 text-xs font-mono">MongoDB Atlas</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">AbuseIPDB API</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">PyOTP (2FA)</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Brevo & Twilio</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">ReportLab</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-3">
+                  <a href="https://github.com/nithissoosai20-spec/Royal-Challengers-Final" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl font-semibold text-white bg-cyan-600 hover:bg-cyan-500 shadow-md shadow-cyan-500/20 transition-all flex items-center gap-2">
+                    <i data-lucide="github" class="w-4 h-4"></i> View Source Code
+                  </a>
+                  <button onclick="openProjectModal('soc')" class="px-5 py-2.5 rounded-xl font-medium text-slate-300 bg-slate-800 hover:bg-slate-700 border border-white/10 transition-all flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-cyan-400"></i> Architecture Breakdown
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Right: Visual Snapshot Preview -->
+              <div class="lg:col-span-5">
+                <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900 group/img">
+                  <img src="assets/soc_preview.png" alt="SOC Dashboard Preview" class="w-full h-auto object-cover transform group-hover/img:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='assets/soc_preview2.png';">
+                  
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex items-end p-6">
+                    <div class="text-xs font-mono text-cyan-300 flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                      <span>Live Telemetry & IP Reputation Module</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Hospital Management System (Odoo 19) -->
+          <div class="glass-card rounded-3xl p-6 sm:p-10 border border-white/10 relative overflow-hidden group">
+            <div class="absolute -top-24 -right-24 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-indigo-500/20 transition-all duration-700"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <!-- Left: Project Info -->
+              <div class="lg:col-span-7 space-y-5">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-mono font-semibold">
+                    Enterprise ERP Architecture
+                  </span>
+                  <span class="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono">
+                    In Development (~80% Complete)
+                  </span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  Hospital Management & Clinical Operations ERP
+                </h3>
+
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                  A modular enterprise healthcare suite built on <strong>Odoo 19</strong>, automating multi-department hospital operations, clinical consultations, automated diagnostic test tracking, and hospital human resource assets.
+                </p>
+
+                <!-- Bullet Points -->
+                <div class="space-y-2.5 text-sm text-slate-300">
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+                    <span><strong>Modular Architecture:</strong> Engineered custom addons including <code>hospital_management</code>, <code>hospital_hr_asset</code>, and specialized billing extensions.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+                    <span><strong>Laboratory Sub-Tests Subsystem:</strong> Developed <code>hospital.lab.subtest</code> models with configurable normal range thresholds, units, and technician appointment wizards.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+                    <span><strong>HR & Asset Lifecycle:</strong> Tracks hospital medical equipment maintenance, department allocations, doctor/nurse shift schedules, and resource utilization.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+                    <span><strong>Role-Based Menus & Security:</strong> Enforced granular access rules via <code>ir.model.access.csv</code> ensuring doctors, lab techs, and billing staff see only their relevant workflows.</span>
+                  </div>
+                </div>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 text-xs font-mono">Odoo 19</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 text-xs font-mono">Python ORM</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">XML Views & Menus</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">PostgreSQL</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-mono">Security Groups</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-3">
+                  <a href="https://github.com/nithissoosai20-spec/hospital_management" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-500/20 transition-all flex items-center gap-2">
+                    <i data-lucide="github" class="w-4 h-4"></i> View Source Code
+                  </a>
+                  <button onclick="openProjectModal('hospital')" class="px-5 py-2.5 rounded-xl font-medium text-slate-300 bg-slate-800 hover:bg-slate-700 border border-white/10 transition-all flex items-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-indigo-400"></i> Module Breakdown
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Right: Visual Snapshot Preview -->
+              <div class="lg:col-span-5">
+                <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900 group/img">
+                  <img src="assets/hospital_preview.png" alt="Hospital Management ERP Preview" class="w-full h-auto object-cover transform group-hover/img:scale-105 transition-transform duration-500">
+                  
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex items-end p-6">
+                    <div class="text-xs font-mono text-indigo-300 flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                      <span>Odoo 19 Custom Clinical Workflow System</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Vehicle Showroom Management System -->
+          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+              <div>
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold">
+                  Full-Stack Web App
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mt-2">Vehicle Showroom Management System</h3>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Python • Web UI • Database</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Engineered a full-stack database-driven web application to manage vehicle inventories, customer sales inquiries, bookings, and billing pipelines. Streamlined user workflows to optimize operational efficiency and stock tracking.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+              <span class="px-2.5 py-1 rounded-md bg-slate-800">Inventory Management</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-800">Sales Workflow Optimization</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-800">Customer Records</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience / Internship Section -->
+    <section id="experience" class="py-20 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-xs font-mono tracking-widest text-emerald-400 uppercase bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 rounded-full mb-3">Work History</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Internship Experience</h2>
+          <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+            Real industry experience collaborating with engineering teams and delivering responsive applications.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="relative border-l-2 border-cyan-500/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+            
+            <!-- Internship Card -->
+            <div class="relative group">
+              <!-- Timeline node dot -->
+              <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-slate-900 border-2 border-cyan-400 flex items-center justify-center">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 group-hover:animate-ping"></span>
+              </div>
+
+              <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/5 group-hover:border-cyan-500/30 transition-all">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Web Development Intern</h3>
+                    <p class="text-sm font-semibold text-cyan-400">ThinkCove Technologies Pvt. Ltd.</p>
+                  </div>
+                  <span class="px-3 py-1 rounded-full bg-slate-800/90 text-xs font-mono text-slate-300 border border-white/5 w-fit">
+                    December 2025 – March 2026
+                  </span>
+                </div>
+
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                  Worked as part of an agile software engineering team contributing to customer-facing web applications.
+                </p>
+
+                <ul class="space-y-2 text-sm text-slate-300">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-cyan-400 mt-1">▸</span>
+                    <span>Developed and maintained responsive, pixel-perfect web interfaces using semantic <strong>HTML5</strong> and <strong>CSS3</strong>.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-cyan-400 mt-1">▸</span>
+                    <span>Collaborated closely with senior developers, participating in design handoffs and delivery practices.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-cyan-400 mt-1">▸</span>
+                    <span>Gained hands-on experience in cross-browser testing, code versioning with Git, and web application deployment procedures.</span>
+                  </li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-white/5">
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">HTML5</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">CSS3</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Responsive Design</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-xs font-mono text-slate-300">Deployment & QA</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Timeline Section -->
+    <section id="education" class="py-20 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-xs font-mono tracking-widest text-purple-400 uppercase bg-purple-500/10 border border-purple-500/20 px-3.5 py-1.5 rounded-full mb-3">Academic Journey</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Education & Qualifications</h2>
+          <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+            A consistent academic record in computer applications and core science.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          
+          <!-- Master of Computer Applications -->
+          <div class="glass-card rounded-2xl p-6 sm:p-7 border border-white/5 relative group hover:border-indigo-500/30 transition-all">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-xs font-mono font-bold border border-indigo-500/20">
+                74.49%
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Master of Computer Applications (MCA)</h3>
+            <p class="text-sm font-semibold text-cyan-400 mt-0.5">St. Joseph's College (Autonomous)</p>
+            <p class="text-xs text-slate-400 mt-1">Tiruchirappalli, Tamil Nadu</p>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Graduation Year</span>
+              <span class="text-white font-bold">2026</span>
+            </div>
+          </div>
+
+          <!-- Bachelor of Computer Science -->
+          <div class="glass-card rounded-2xl p-6 sm:p-7 border border-white/5 relative group hover:border-cyan-500/30 transition-all">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                <i data-lucide="book-open" class="w-6 h-6"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-mono font-bold border border-cyan-500/20">
+                75.6%
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Bachelor of Computer Science (B.Sc)</h3>
+            <p class="text-sm font-semibold text-cyan-400 mt-0.5">G.T.N Arts College</p>
+            <p class="text-xs text-slate-400 mt-1">Dindigul, Tamil Nadu</p>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Year of Passing</span>
+              <span class="text-white font-bold">2023</span>
+            </div>
+          </div>
+
+          <!-- Higher Secondary -->
+          <div class="glass-card rounded-2xl p-6 sm:p-7 border border-white/5 relative group hover:border-emerald-500/30 transition-all">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-mono font-bold border border-emerald-500/20">
+                88.9%
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Higher Secondary Certificate (HSC)</h3>
+            <p class="text-sm font-semibold text-emerald-400 mt-0.5">John Paul Higher Secondary School</p>
+            <p class="text-xs text-slate-400 mt-1">Tamil Nadu State Board</p>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Year of Passing</span>
+              <span class="text-white font-bold">2020</span>
+            </div>
+          </div>
+
+          <!-- SSLC -->
+          <div class="glass-card rounded-2xl p-6 sm:p-7 border border-white/5 relative group hover:border-purple-500/30 transition-all">
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                <i data-lucide="check" class="w-6 h-6"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 text-xs font-mono font-bold border border-purple-500/20">
+                80.0%
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Secondary School Leaving Certificate (SSLC)</h3>
+            <p class="text-sm font-semibold text-purple-400 mt-0.5">Holy Cross Matric Hr. Sec. School</p>
+            <p class="text-xs text-slate-400 mt-1">Matriculation Board</p>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>Year of Passing</span>
+              <span class="text-white font-bold">2018</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16">
+          <span class="text-xs font-mono tracking-widest text-cyan-400 uppercase bg-cyan-500/10 border border-cyan-500/20 px-3.5 py-1.5 rounded-full mb-3">Get In Touch</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Let's Build Something Exceptional</h2>
+          <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+            I am actively seeking an entry-level software engineering, web development, or security operations role. Feel free to reach out directly!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto items-start">
+          
+          <!-- Contact Info Cards -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <a href="mailto:nithissoosai20@gmail.com" class="glass-card rounded-2xl p-5 border border-white/5 flex items-center gap-4 hover:border-cyan-500/40 transition-all group block">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform shrink-0">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">Direct Email</span>
+                <p class="text-white font-medium text-sm sm:text-base group-hover:text-cyan-300 transition-colors">nithissoosai20@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+918489578254" class="glass-card rounded-2xl p-5 border border-white/5 flex items-center gap-4 hover:border-indigo-500/40 transition-all group block">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform shrink-0">
+                <i data-lucide="phone-call" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">Phone / WhatsApp</span>
+                <p class="text-white font-medium text-sm sm:text-base group-hover:text-indigo-300 transition-colors">+91 84895 78254</p>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/m-nithis-soosai-67340b318" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl p-5 border border-white/5 flex items-center gap-4 hover:border-purple-500/40 transition-all group block">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-105 transition-transform shrink-0">
+                <i data-lucide="linkedin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">LinkedIn Profile</span>
+                <p class="text-white font-medium text-sm sm:text-base group-hover:text-purple-300 transition-colors">linkedin.com/in/m-nithis-soosai</p>
+              </div>
+            </a>
+
+            <div class="glass-card rounded-2xl p-5 border border-white/5 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400">Current Location</span>
+                <p class="text-white font-medium text-sm sm:text-base">Dindigul, Tamil Nadu, India</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick Interactive Message Box -->
+          <div class="lg:col-span-7">
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 space-y-4">
+              <h3 class="text-xl font-bold text-white mb-2">Send a Direct Message</h3>
+              
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Your Name</label>
+                <input type="text" id="senderName" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-sm font-sans transition-colors">
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Your Email</label>
+                <input type="email" id="senderEmail" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-sm font-sans transition-colors">
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Message / Job Opportunity</label>
+                <textarea id="senderMessage" rows="4" required placeholder="Hi Nithis, I reviewed your portfolio and would like to discuss a software developer opportunity..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-sm font-sans transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Send Message via Email Client</span>
+              </button>
+
+              <div id="formFeedback" class="hidden p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono text-center">
+                Opening your email client with this pre-filled message...
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-[#05080e] py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white text-xs">NS</span>
+        <span class="text-sm font-medium text-slate-400">© 2026 Nithis Soosai. All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs font-mono text-slate-400">
+        <a href="#hero" class="hover:text-cyan-400 transition-colors flex items-center gap-1">
+          <span>Back to Top</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL -->
+  <div id="resumeModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-4xl bg-slate-900 border border-white/10 rounded-3xl shadow-2xl overflow-hidden my-auto max-h-[90vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-white/10 flex items-center justify-between bg-slate-900/90">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Nithis Soosai - Resume</h3>
+            <p class="text-xs text-slate-400 font-mono">Master of Computer Applications (MCA)</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="resume.html" target="_blank" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono flex items-center gap-1.5 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4"></i> Full Page
+          </a>
+          <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono flex items-center gap-1.5 transition-colors">
+            <i data-lucide="printer" class="w-4 h-4"></i> Print
+          </button>
+          <button onclick="closeResumeModal()" class="p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body / Structured Resume -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-slate-300 text-sm leading-relaxed">
+        
+        <!-- Candidate Overview -->
+        <div class="border-b border-white/10 pb-6">
+          <h2 class="text-2xl font-bold text-white">NITHIS SOOSAI</h2>
+          <p class="text-xs font-mono text-cyan-400 mt-1">Dindigul, Tamil Nadu, India • +91 84895 78254 • nithissoosai20@gmail.com</p>
+          <p class="text-xs font-mono text-slate-400">linkedin.com/in/m-nithis-soosai-67340b318 • github.com/nithissoosai20-spec</p>
+          
+          <div class="mt-4">
+            <h4 class="text-xs font-mono uppercase text-slate-400 tracking-wider font-bold mb-1">Career Objective</h4>
+            <p class="text-slate-300 text-xs sm:text-sm">
+              Motivated Computer Applications postgraduate (MCA) with hands-on experience in web application development using Python, Flask, and MongoDB. Strong problem-solving skills, a collaborative approach, and a keen interest in learning new technologies. Seeking an entry-level role in a dynamic organization where I can apply my technical skills, grow professionally, and contribute to team success.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills Summary -->
+        <div class="border-b border-white/10 pb-6">
+          <h4 class="text-xs font-mono uppercase text-slate-400 tracking-wider font-bold mb-2">Technical Skills</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div><span class="text-slate-400">Programming:</span> <strong class="text-white">Python</strong></div>
+            <div><span class="text-slate-400">Web Technologies:</span> <strong class="text-white">HTML, CSS, Flask</strong></div>
+            <div><span class="text-slate-400">ERP & Frameworks:</span> <strong class="text-white">Odoo 19 (custom modules), XML views</strong></div>
+            <div><span class="text-slate-400">Database:</span> <strong class="text-white">MongoDB Atlas, PostgreSQL</strong></div>
+            <div><span class="text-slate-400">Security Concepts:</span> <strong class="text-white">SIEM, Log Analysis, Threat Detection, Incident Response, RBAC, 2FA</strong></div>
+            <div><span class="text-slate-400">Tools & Integrations:</span> <strong class="text-white">Git, GitHub, AbuseIPDB, Brevo, Twilio</strong></div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="border-b border-white/10 pb-6 space-y-4">
+          <h4 class="text-xs font-mono uppercase text-slate-400 tracking-wider font-bold">Featured Projects</h4>
+          
+          <div>
+            <div class="flex justify-between items-center text-xs">
+              <strong class="text-white text-sm">Hospital Management System (Odoo 19)</strong>
+              <span class="text-amber-400 font-mono">In development (~80% complete)</span>
+            </div>
+            <p class="text-xs font-mono text-indigo-300">Python, Odoo 19, XML | Modules: hospital_management, hospital_hr_asset</p>
+            <ul class="list-disc list-inside text-xs text-slate-300 mt-1 space-y-1">
+              <li>Developing custom Odoo 19 modules for hospital operations, including a separate HR and asset management module.</li>
+              <li>Built role-based dashboards and menu structures so each user role sees only the relevant workflows.</li>
+              <li>Defined models, views, actions, and menus, resolving module-loading issues and XML external ID mismatches.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center text-xs">
+              <strong class="text-white text-sm">Automated Incident Command System (SOC Dashboard)</strong>
+              <span class="text-emerald-400 font-mono">Completed</span>
+            </div>
+            <p class="text-xs font-mono text-cyan-300">Python, Flask, MongoDB Atlas, AbuseIPDB, PyOTP, Brevo, Twilio</p>
+            <ul class="list-disc list-inside text-xs text-slate-300 mt-1 space-y-1">
+              <li>Developed a web-based SOC dashboard for real-time security log monitoring and threat detection.</li>
+              <li>Integrated AbuseIPDB API for IP reputation analysis and implemented 2FA, reCAPTCHA, and account lockout.</li>
+              <li>Built an automated alerting pipeline using Brevo (email) and Twilio (voice calls) for rapid incident notification.</li>
+              <li>Designed role-based access control (Super Admin, Admin, Analyst, User) enforcing least-privilege security.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center text-xs">
+              <strong class="text-white text-sm">Vehicle Showroom Management System</strong>
+            </div>
+            <p class="text-xs font-mono text-slate-400">Python, Web Technologies, Database</p>
+            <ul class="list-disc list-inside text-xs text-slate-300 mt-1 space-y-1">
+              <li>Designed and developed a full-stack web application for managing vehicle inventory and sales.</li>
+              <li>Streamlined user workflows to improve usability and operational efficiency.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="border-b border-white/10 pb-6">
+          <h4 class="text-xs font-mono uppercase text-slate-400 tracking-wider font-bold mb-2">Work Experience & Internships</h4>
+          <div class="flex justify-between text-xs">
+            <strong class="text-white">Web Development Intern, ThinkCove Technologies Pvt. Ltd.</strong>
+            <span class="font-mono text-slate-400">Dec 2025 – Mar 2026</span>
+          </div>
+          <ul class="list-disc list-inside text-xs text-slate-300 mt-1 space-y-1">
+            <li>Developed responsive web applications using HTML and CSS.</li>
+            <li>Collaborated with developers to understand real-world workflows and delivery practices.</li>
+            <li>Gained hands-on experience in deployment and testing of web applications.</li>
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h4 class="text-xs font-mono uppercase text-slate-400 tracking-wider font-bold mb-2">Education</h4>
+          <div class="space-y-1.5 text-xs">
+            <div class="flex justify-between">
+              <span><strong>MCA</strong> - St. Joseph's College (Autonomous), Tiruchirappalli</span>
+              <span class="font-mono text-white">2026 | 74.49%</span>
+            </div>
+            <div class="flex justify-between">
+              <span><strong>B.Sc Computer Science</strong> - G.T.N Arts College, Dindigul</span>
+              <span class="font-mono text-white">2023 | 75.6%</span>
+            </div>
+            <div class="flex justify-between">
+              <span><strong>Higher Secondary</strong> - John Paul Higher Secondary School</span>
+              <span class="font-mono text-white">2020 | 88.9%</span>
+            </div>
+            <div class="flex justify-between">
+              <span><strong>SSLC</strong> - Holy Cross Matric Hr. Sec. School</span>
+              <span class="font-mono text-white">2018 | 80%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DEEP-DIVE MODAL -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-3xl bg-slate-900 border border-white/10 rounded-3xl shadow-2xl overflow-hidden my-auto max-h-[90vh] flex flex-col">
+      
+      <div class="p-6 border-b border-white/10 flex items-center justify-between bg-slate-900/90">
+        <h3 id="modalProjectTitle" class="text-lg font-bold text-white">Project Details</h3>
+        <button onclick="closeProjectModal()" class="p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div id="modalProjectContent" class="p-6 sm:p-8 overflow-y-auto space-y-4 text-slate-300 text-sm leading-relaxed">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JS Interactive Logic -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Typewriter Effect
+    const roles = [
+      "MCA Postgraduate (2026)",
+      "Full-Stack Web Developer",
+      "Odoo 19 ERP Specialist",
+      "SOC & Threat Intel Enthusiast"
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typewriterEl = document.getElementById("typewriter");
+
+    function type() {
+      const currentRole = roles[roleIndex];
+      if (isDeleting) {
+        typewriterEl.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typewriterEl.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typeSpeed = 400;
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+    type();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById("mobileMenuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+    document.querySelectorAll(".mobile-nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    // Resume Modal Functions
+    function openResumeModal() {
+      document.getElementById("resumeModal").classList.remove("hidden");
+      lucide.createIcons();
+    }
+    function closeResumeModal() {
+      document.getElementById("resumeModal").classList.add("hidden");
+    }
+
+    // Project Deep Dive Modal Content
+    const projectData = {
+      soc: {
+        title: "Automated Incident Command System (Royal Challengers SOC)",
+        html: `
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono">
+              Repository: <a href="https://github.com/nithissoosai20-spec/Royal-Challengers-Final" target="_blank" class="underline hover:text-white">github.com/nithissoosai20-spec/Royal-Challengers-Final</a>
+            </div>
+            
+            <h4 class="font-bold text-white text-base">Key Architecture & Capabilities:</h4>
+            <ul class="space-y-2 list-disc list-inside text-xs sm:text-sm text-slate-300">
+              <li><strong>Zero-Trust Authentication:</strong> Implemented TOTP 2FA QR code onboarding with <code>pyotp</code> and <code>qrcode</code>, Google reCAPTCHA v2 on the login endpoint, and session timeout after inactivity.</li>
+              <li><strong>Threat Intelligence & AbuseIPDB:</strong> Live threat scoring against malicious IPs, proxy/VPN detection, and automated blocking thresholds.</li>
+              <li><strong>Incident Escalation Pipeline:</strong> Integration with Brevo (Sendinblue HTTP API) for instant analyst email dispatch, and Twilio Voice API for automated phone alerts during critical security events.</li>
+              <li><strong>Comprehensive Reporting:</strong> Generates instant audit trail exports in PDF format (using ReportLab) and Word format (using python-docx) for compliance records.</li>
+            </ul>
+
+            <h4 class="font-bold text-white text-base mt-4">Tech Stack & Libraries:</h4>
+            <div class="flex flex-wrap gap-2 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-cyan-400">Python 3.12</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-cyan-400">Flask</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-cyan-400">MongoDB Atlas</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">PyOTP</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">AbuseIPDB</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Brevo API</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">Twilio API</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">ReportLab</span>
+            </div>
+          </div>
+        `
+      },
+      hospital: {
+        title: "Hospital Management System (Odoo 19)",
+        html: `
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono">
+              Repository: <a href="https://github.com/nithissoosai20-spec/hospital_management" target="_blank" class="underline hover:text-white">github.com/nithissoosai20-spec/hospital_management</a>
+            </div>
+            
+            <h4 class="font-bold text-white text-base">Key Architecture & Capabilities:</h4>
+            <ul class="space-y-2 list-disc list-inside text-xs sm:text-sm text-slate-300">
+              <li><strong>Multi-Module Suite:</strong> Developed custom Odoo 19 modules <code>hospital_management</code> (patient records, appointments, consultations, labs) and <code>hospital_hr_asset</code> (staff management and equipment tracking).</li>
+              <li><strong>Lab Sub-Tests Architecture:</strong> Created relational models (<code>hospital.lab.subtest</code>) supporting quantitative test normal ranges, measurement units, and interactive wizards for lab technicians.</li>
+              <li><strong>Strict Role-Based Security:</strong> Configured security groups (Admin, Doctor, Receptionist, Lab Tech, Pharmacist) and record rules in <code>ir.model.access.csv</code> to prevent unauthorized record tampering.</li>
+              <li><strong>Custom XML Views:</strong> Crafted custom Kanban, Form, List, and Search views tailored specifically for hospital staff productivity.</li>
+            </ul>
+
+            <h4 class="font-bold text-white text-base mt-4">Tech Stack & Frameworks:</h4>
+            <div class="flex flex-wrap gap-2 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-400">Odoo 19 Community</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-400">Python ORM</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">XML View Definition</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300">QWeb Reports</span>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    function openProjectModal(key) {
+      const data = projectData[key];
+      if (!data) return;
+      document.getElementById("modalProjectTitle").textContent = data.title;
+      document.getElementById("modalProjectContent").innerHTML = data.html;
+      document.getElementById("projectModal").classList.remove("hidden");
+      lucide.createIcons();
+    }
+    function closeProjectModal() {
+      document.getElementById("projectModal").classList.add("hidden");
+    }
+
+    // Close modals on outside click or ESC key
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeResumeModal();
+        closeProjectModal();
+      }
+    });
+
+    // Contact Form Handler
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById("senderName").value;
+      const email = document.getElementById("senderEmail").value;
+      const msg = document.getElementById("senderMessage").value;
+      
+      const subject = encodeURIComponent("Portfolio Contact from " + name);
+      const body = encodeURIComponent("Name: " + name + "\\nEmail: " + email + "\\n\\nMessage:\\n" + msg);
+      
+      const feedback = document.getElementById("formFeedback");
+      feedback.classList.remove("hidden");
+      
+      setTimeout(() => {
+        window.location.href = `mailto:nithissoosai20@gmail.com?subject=${subject}&body=${body}`;
+      }, 600);
+    }
+  </script>
+</body>
+</html>
